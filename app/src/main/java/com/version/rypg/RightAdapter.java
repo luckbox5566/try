@@ -51,7 +51,7 @@ public class RightAdapter  extends BaseAdapter {
     String[] index_s={"001","002","003","004","005","006","007","008","009","010","011","012","013"
             ,"014","015","016","017","018","019","020","021","022","023","024","025","026"};
     private LayoutInflater mInflater=null;
-
+    private int fisrt_time=0;
     public RightAdapter(List<RypgBben.DSBean.DTBean.DRBean.DCBean.LableDocumentBean.CheckBoxBean> checkBox, List<RypgBben.DSBean.DTBean.DRBean.DCBean.LableDocumentBean.TextBoxBean> textBox, List<RypgBben.DSBean.DTBean.DRBean.DCBean.LableDocumentBean.PanelBean> panel, int num, List<RypgBben.DSBean.DTBean.DRBean.DCBean.LableDocumentBean.LabelBean> label, List<RypgBben.DSBean.DTBean.DRBean.DCBean.LableDocumentBean.DateTimePickerBean> dateTimePicker, Context context) {
         CheckBox = checkBox;
         TextBox = textBox;
@@ -173,9 +173,13 @@ public class RightAdapter  extends BaseAdapter {
                     radioButton.setText(items[radio]);
                     radioGroup.addView(radioButton);
                 }
+                if(fisrt_time==0){
+                RadioButton radioButton2=(RadioButton)radioGroup.getChildAt(0);
+                radioButton2.setChecked(true);
 
-               /* RadioButton radioButton2=(RadioButton)radioGroup.getChildAt(0);
-                radioButton2.setChecked(true);*/
+                }
+
+
 
                 yh_layout.addView(radioGroup);
                 radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

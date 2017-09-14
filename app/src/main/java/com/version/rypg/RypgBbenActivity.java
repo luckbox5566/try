@@ -1,7 +1,9 @@
 package com.version.rypg;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
@@ -28,6 +31,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import enjoyor.enjoyorzemobilehealth.R;
+import enjoyor.enjoyorzemobilehealth.activity.HomePageActivity;
 import enjoyor.enjoyorzemobilehealth.adapter.LeftAdapter;
 import enjoyor.enjoyorzemobilehealth.adapter.RightAdapter;
 import enjoyor.enjoyorzemobilehealth.entities.CheckBoxBean;
@@ -68,16 +72,19 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
     /**
      * 里面存放右边ListView需要显示标题的条目position
      */
-
+    ProgressDialog progressDialog;
     private ArrayList<String> list1=new ArrayList();
     private ArrayList<String> list2=new ArrayList();
     private ArrayList<String> list3=new ArrayList();
     private ArrayList<String> list4=new ArrayList();
 
     private ArrayList<Integer> showTitle;
+    private ImageView imageView;
+    private ImageView back_image;
 
     ZhierCall zhierCall;
     TextView title_textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +95,37 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
         String name=preferences2.getString("id","");
         String canshu=preferences2.getString("bqdm","");
         title_textView= (TextView) findViewById(R.id.title);
+        imageView= (ImageView) findViewById(R.id.tj);
+        back_image= (ImageView) findViewById(R.id.back);
+        back_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RypgBbenActivity.this, HomePageActivity.class));
+                finish();
+            }
+        });
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                progressDialog = new ProgressDialog(RypgBbenActivity.this);
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDialog.setMessage("加载中...");
+                progressDialog.show();
+                zhierCall.start(new NetWork.SocketResult() {
+                    @Override
+                    public void success(String data) {
+                        progressDialog.dismiss();
+                        Toast.makeText(RypgBbenActivity.this,"上传成功!",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void fail(String info) {
+
+                    }
+                });
+                //progressDialog.dismiss();
+            }
+        });
         zhierCall = (new ZhierCall())
                 .setId(name)
                 .setNumber("0306401")
@@ -97,6 +135,10 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
                 .setPort(5000)
                 .build();
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("加载中...");
+        progressDialog.show();
         zhierCall.start(new NetWork.SocketResult() {
             @Override
             public void success(String data) {
@@ -228,6 +270,7 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
                      }
                  });
 
+                progressDialog.dismiss();
             }
 
             @Override
