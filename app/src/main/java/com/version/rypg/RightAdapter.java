@@ -72,7 +72,7 @@ public class RightAdapter  extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 10;
+        return num;
     }
 
     @Override
@@ -133,11 +133,15 @@ public class RightAdapter  extends BaseAdapter {
             for(int j=0;j<s_list.size();j++){
                 items[j]=s_list.get(j);
             }
-            if(s_list.size()>0){
+            if(s_list.size()>0&&position!=9){
                 Spinner spinner=new Spinner(context);
                 spinner.setBackground(null);
                 spinner.setAdapter(new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,items));
                 yh_layout.addView(spinner);
+            }else if(s_list.size()>0&&position==9){
+                android.widget.CheckBox checkBox=new CheckBox(context);
+                checkBox.setText(s_list.get(0));
+                yh_layout.addView(checkBox);
             }
             //textview
             for(int i=0;i<flBben.getTextbox_fl().size();i++){
@@ -173,6 +177,7 @@ public class RightAdapter  extends BaseAdapter {
                                     textView.setText(mYear[0] +"年"+ mMonth[0] +"月"+ mDay[0] +"日");
                                 }
                             };
+
                             DatePickerDialog dialog=new DatePickerDialog(context, mdateListener, mYear[0], mMonth[0], mDay[0]);
                             dialog.show();
                         }
@@ -185,7 +190,10 @@ public class RightAdapter  extends BaseAdapter {
 
         }
         String s="";
-
+        View view=new View(context);
+        view.setBackgroundColor(Color.BLACK);
+        view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));
+        fater_layout.addView(view);
         return convertView;
     }
 

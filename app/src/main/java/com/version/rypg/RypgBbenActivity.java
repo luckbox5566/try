@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -41,7 +42,7 @@ import my_network.ZhierCall;
  * Created by dantevsyou on 2017/9/13.
  */
 
-public class RypgBbenActivity extends AppCompatActivity implements View.OnClickListener {
+public class RypgBbenActivity extends Activity implements View.OnClickListener {
     /**
      * 左侧菜单
      */
@@ -79,7 +80,9 @@ public class RypgBbenActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_rypg);
+
         SharedPreferences preferences2 = getSharedPreferences("init", Context.MODE_PRIVATE);
         String name=preferences2.getString("id","");
         String canshu=preferences2.getString("bqdm","");
@@ -176,18 +179,50 @@ public class RypgBbenActivity extends AppCompatActivity implements View.OnClickL
                 setView();
                 //setData();
                 initLinstener();
-                try{
-                    String[] left_s=new String[left_list.size()];
+                final String[] left_s;
+                   left_s=new String[left_list.size()];
                     for(int i=0;i<left_list.size();i++){
                         left_s[i]=left_list.get(i);
                     }
                     leftAdapter = new LeftAdapter(RypgBbenActivity.this, left_s);
                     lv_menu.setAdapter(leftAdapter);
 
-                }catch (Exception e){
-                    String s=e.toString();
-                }
                 lv_home.setAdapter(rightAdapter1);
+                lv_home.setOnScrollListener(new AbsListView.OnScrollListener() {
+                    @Override
+                    public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+                    }
+
+                    @Override
+                    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+                        leftAdapter = new LeftAdapter(RypgBbenActivity.this,firstVisibleItem, left_s);
+                        lv_menu.setAdapter(leftAdapter);
+                        lv_menu.setSelection(firstVisibleItem);
+                    }
+                });
+                lv_menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        leftAdapter = new LeftAdapter(RypgBbenActivity.this,position, left_s);
+                        lv_menu.setAdapter(leftAdapter);
+                        lv_home.setSelection(position);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+                 lv_menu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                     @Override
+                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                         leftAdapter = new LeftAdapter(RypgBbenActivity.this,position, left_s);
+                         lv_menu.setAdapter(leftAdapter);
+                         lv_home.setSelection(position);
+                     }
+                 });
 
             }
 

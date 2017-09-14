@@ -24,9 +24,18 @@ public class LeftAdapter extends BaseAdapter {
 	private String [] data ;
 	private int mPosition=-1;
 
+	private int postion=0;
+
+
 
 	public LeftAdapter(Context context, String[] data) {
 		this.context = context;
+		this.data = data;
+	}
+
+	public LeftAdapter(Context context, int postion, String[] data) {
+		this.context = context;
+		this.postion = postion;
 		this.data = data;
 	}
 
@@ -69,7 +78,7 @@ public class LeftAdapter extends BaseAdapter {
 			holder = (ViewHolder)arg1.getTag();
 		}
 
-		if(i == DangerActivity.mPosition){
+		if(i == postion){
 			holder.tv_name.setBackgroundColor(Color.WHITE);
 			holder.tv_name.setTextColor(context.getResources().getColor(R.color.my_bule));
 		}else {

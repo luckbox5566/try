@@ -11,7 +11,7 @@
     <FrameLayout
         android:id="@+id/no1"
         android:layout_width="match_parent"
-       android:layout_height="@dimen/y45"
+       android:layout_height="80dp"
         android:background="@color/my_bule">
 
         <ImageView
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="危险评估"
+            android:text="入院评估单"
             android:textColor="#fff"
             android:textSize="@dimen/text_1" />
     </FrameLayout>
@@ -98,14 +98,7 @@
             android:layout_marginTop="18dp"
             android:background="#98403e3e">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="225dp"
-                android:text="2016-05-26"
-                android:textColor="#fff"
-                android:textSize="@dimen/text_4" />
+
         </LinearLayout>
     </LinearLayout>
     <!--内容栏-->
