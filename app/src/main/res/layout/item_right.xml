@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--评估分数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_fenshu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="@dimen/x15"
+                android:text="23"
+                android:textColor="@color/home_top_con"
+                android:textSize="@dimen/text_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="分"
+                android:textColor="@color/home_top_con"
+                android:textSize="@dimen/text_12" />
+
+            <TextView
+                android:id="@+id/item_fengxian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="@drawable/bg_nodanger"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="无风险"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/text_12" />
+        </LinearLayout>
+
+
+        <!--显示部分 -->
+        <RelativeLayout
+            android:id="@+id/hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:padding="@dimen/x4"
+                android:id="@+id/tv_hulicuoshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x15"
+                android:background="@drawable/bg_hulicuoshi"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="护理措施"
+                android:textSize="@dimen/text_11" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/tv_hulicuoshi"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/x15">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="评估时间："
+                        android:textColor="@color/home_top_tit"
+                        android:textSize="@dimen/text_11" />
+
+                    <TextView
+                        android:id="@+id/tv_pg_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="评估时间："
+                        android:textColor="@color/home_top_tit"
+                        android:textSize="@dimen/text_11" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_pingguren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y3"
+                    android:text="评估人："
+                    android:textColor="@color/home_top_tit"
+                    android:textSize="@dimen/text_11" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <!--隐藏部分-->
+        <LinearLayout
+            android:id="@+id/rl_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:descendantFocusability="blocksDescendants"
+            android:visibility="gone">
+
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/x3"
+                android:lineSpacingMultiplier="1"
+                android:padding="@dimen/x3"
+                android:text="@string/tiaoshu"
+                android:textColor="@color/home_top_tit"
+                android:textSize="@dimen/text_11" />
+            <ImageView
+                android:id="@+id/iv_danger_close"
+                android:layout_width="@dimen/x40"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x15"
+                android:focusable="false"
+                android:padding="@dimen/x5"
+                android:layout_gravity="right|center"
+                android:src="@drawable/btn_hlcs_close" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:background="@color/view" />
+</LinearLayout>

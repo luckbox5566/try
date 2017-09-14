@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item_gv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+    <ImageView
+        android:id="@+id/iv_choose_gv"
+        android:layout_width="@dimen/x20"
+        android:layout_margin="@dimen/x10"
+        android:layout_centerVertical="true"
+        android:layout_height="@dimen/x20"
+        android:src="@drawable/btn_choose_null"/>
+    <TextView
+        android:id="@+id/tv_sorce_gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x15"
+        android:text="10分" />
+    <TextView
+        android:id="@+id/tv_name_gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_choose_gv"
+        android:layout_toLeftOf="@+id/tv_sorce_gv"
+        android:text="独立完成" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:gravity="center"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/xh_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/x10"
+            android:padding="10dp"
+            android:text="保存"
+            android:textColor="@color/my_bule"
+            android:textSize="@dimen/text_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="病人ZYID：:"
+                android:textColor="#a3a3a3"
+                />
+
+            <EditText
+                android:id="@+id/zyid"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:textColor="#a3a3a3"/>
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="病人姓名:"
+                android:padding="10dp"
+                android:drawablePadding="10dp"
+                android:textColor="#a3a3a3"/>
+            <EditText
+                android:id="@+id/xm"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:padding="10dp"
+                android:drawablePadding="10dp"
+                android:textColor="#a3a3a3"
+                />
+        </LinearLayout>-->
+        <View
+            android:layout_width="@dimen/text_2"
+            android:layout_height="20dp"
+            android:background="#ffffff"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择巡回类型"
+            android:textColor="#3f90eb"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#ffffff"/>
+        <!--<GridView
+            android:id="@+id/listxhxz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:listSelector="#00000000"
+            android:stretchMode="columnWidth"
+            >
+        </GridView>-->
+        <enjoyor.enjoyorzemobilehealth.views.FlowLayout
+            android:id="@+id/listxhxz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </enjoyor.enjoyorzemobilehealth.views.FlowLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

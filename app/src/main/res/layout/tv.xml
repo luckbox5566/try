@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tag_bg"
+    android:text="Helloworld"
+    android:layout_margin="@dimen/x4"
+    android:paddingLeft="@dimen/x8"
+    android:paddingRight="@dimen/x8"
+    android:textColor="@drawable/text_color">
+</TextView>
+<!--<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_margin="@dimen/x12"-->
+<!--android:background="@drawable/bg_shoushu"-->
+<!--android:button="@null"-->
+<!--android:gravity="center"-->
+<!--android:padding="@dimen/x4"-->
+<!--android:textSize="@dimen/text_14"-->
+<!--android:textColor="@drawable/text_shoushu"-->
+<!--android:text="术前" />-->

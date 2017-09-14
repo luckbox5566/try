@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="enjoyor.enjoyorzemobilehealth.activity.HomePageActivity">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="46.08dp"
+       android:background="@color/my_bule"
+       android:elevation="4dp"
+       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+       app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+       app:titleTextAppearance="@style/Toolbar.TitleText">
+      <RelativeLayout
+          android:background="#00ffffff"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+         <TextView
+             android:gravity="center"
+             android:layout_alignParentLeft="true"
+             android:textColor="#fff"
+             android:layout_marginLeft="10dp"
+             android:text="银江移动医疗"
+             android:textSize="22sp"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent" />
+         <LinearLayout
+             android:background="#00ffffff"
+             android:gravity="center"
+             android:layout_alignParentRight="true"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginRight="13dp">
+            <ImageView
+                android:id="@+id/image_o1"
+                android:layout_width="23.04dp"
+                android:layout_height="23.04dp"
+                android:src="@drawable/icon_message"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+
+                />
+            <ImageView
+                android:id="@+id/image_o2"
+                android:layout_width="23.04dp"
+                android:layout_height="23.0dp"
+                android:src="@drawable/icon_change"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/image_o1"
+                />
+         </LinearLayout>
+
+      </RelativeLayout>
+
+   </android.support.v7.widget.Toolbar>
+
+   <TextView
+       android:id="@+id/gh"
+       android:textSize="20sp"
+       android:gravity="center"
+       android:textColor="#e13535"
+       android:paddingBottom="5dp"
+       android:paddingTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/recyclerview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       />
+
+</LinearLayout>

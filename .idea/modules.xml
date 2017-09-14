@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my_network/my_network.iml" filepath="$PROJECT_DIR$/my_network/my_network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my_xml/my_xml.iml" filepath="$PROJECT_DIR$/my_xml/my_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sliding_menu/sliding_menu.iml" filepath="$PROJECT_DIR$/sliding_menu/sliding_menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/try.iml" filepath="$PROJECT_DIR$/try.iml" />
+      <module fileurl="file://$PROJECT_DIR$/update/update.iml" filepath="$PROJECT_DIR$/update/update.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmltojsonlib/xmltojsonlib.iml" filepath="$PROJECT_DIR$/xmltojsonlib/xmltojsonlib.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--Login Layout parameters.-->
+    <dimen name="cardview_corner">8dp</dimen>
+    <dimen name="cardview_height">40dp</dimen>
+    <dimen name="cardview_in_left_padding">15dp</dimen>
+    <dimen name="view_margin">14.5dp</dimen>
+    <dimen name="layout_padding_left_or_right">26.5dp</dimen>
+    <dimen name="vertical_no1_view">23dp</dimen>
+    <dimen name="vertical_no2_view">68dp</dimen>
+    <dimen name="login_text_size">24sp</dimen>
+    <dimen name="mobile_medical_text_size">13sp</dimen>
+    <dimen name="endemic_area_text_size">17sp</dimen>
+    <dimen name="login_button_text_size">22sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--默认字体大小-->
+    <dimen name="text_1">21.3sp</dimen>
+    <dimen name="text_2">20sp</dimen>
+    <dimen name="text_3">17.3sp</dimen>
+    <dimen name="text_4">14.7sp</dimen>
+
+    <dimen name="text_11">11sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_13">13sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_15">15sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="shadow_width">1dp</dimen>
+
+</resources>

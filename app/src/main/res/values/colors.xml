@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--Login Layout Color Resource-->
+    <color name="text_color">#333333</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="cardview_background">#00ffffff</color>
+    <color name="my_bule">#3f90eb</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <!--危险评估颜色资源-->
+    <color name="menu_t">#333333</color>
+    <color name="menu_item_bg">#f0f0f0</color>
+
+    <color name="home_top_tit">#555555</color>
+    <color name="home_top_con">#3f90eb</color>
+
+    <color name="bai">#ffffff</color>
+    <color name="view">#dedede</color>
+    <color name="hui">#f8f8f8</color>
+
+    <color name="mm1">#ffb705</color>
+    <color name="mm2">#6cc8f1</color>
+    <color name="mm3">#cf050c</color>
+    <color name="mm4">#e19232</color>
+    <color name="mm5">#cf050c</color>
+</resources>

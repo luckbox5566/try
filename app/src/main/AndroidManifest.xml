@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="enjoyor.enjoyorzemobilehealth">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Required to act as a custom watch face. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+
+
+    <application
+    android:name=".application.MyApplication"
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--欢迎页面-->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.NetWorkTestActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.HomePageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BrlbActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BryzActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".other.OkHttpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ZXYZActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".other.Test"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.BingQuYiZhuActivity"
+            android:label="@string/title_activity_bing_qu_yi_zhu"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!--危险评估-->
+        <activity
+            android:name=".activity.danger.DangerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <!--ADL评估-->
+        <activity android:name=".activity.danger.DangerAdd1Activity"
+            android:screenOrientation="portrait"/>
+        <!-- 疼痛程度评估-->
+        <activity
+            android:name=".activity.danger.DangerAdd2Activity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait">
+
+    </activity>
+        <!-- 压疮评估-->
+        <activity android:name=".activity.danger.DangerAdd3Activity"
+            android:screenOrientation="portrait"/>
+        <!--静脉血栓栓塞症风险评估-->
+        <activity
+            android:name=".activity.danger.DangerAdd4Activity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!--坠床-->
+        <activity
+            android:name=".activity.danger.FallBedActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!--跌倒-->
+        <activity
+            android:name=".activity.danger.FallActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!--重度疼痛-->
+        <activity
+            android:name=".activity.danger.SeverePainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!--小儿疼痛-->
+        <activity
+            android:name=".activity.danger.ChildPainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!--成人疼痛评估-->
+        <activity
+            android:name=".activity.danger.AdultPainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!--非计划先拔管评估-->
+        <activity
+            android:name=".activity.danger.UnPlanActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".activity.ShengMingTiZhengLuRuActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.TemperatureChartActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.TemperatureDetailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.HuLiDanActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.HuLiDanDetailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.ZongJieTypeSelectActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.infosearch.BrxxcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.infosearch.XxcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.infosearch.JcjgcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.infosearch.JyjgcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.infosearch.SsjlcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.infosearch.SsjlxqActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activity.infosearch.XhcxActivity"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <activity android:name=".activity.infosearch.BqxhcxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+    <activity android:name=".activity.JkjyActivity"
+        android:screenOrientation="portrait">
+
+    </activity>
+    <activity android:name=".activity.RyjdActivity"
+        android:screenOrientation="portrait">
+
+    </activity>
+        <activity android:name="com.bben.view.BryzBbenActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.BrxxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.SscxActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".activity.RypgActivity"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity android:name="com.version.rypg.RypgBbenActivity"
+            android:screenOrientation="portrait"></activity>
+
+    </application>
+
+</manifest>

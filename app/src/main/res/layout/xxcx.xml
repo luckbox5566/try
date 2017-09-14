@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_danger"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="enjoyor.enjoyorzemobilehealth.activity.infosearch.XxcxActivity"
+    >
+
+    <FrameLayout
+        android:id="@+id/no1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/my_bule">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="信息查询"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_1" />
+    </FrameLayout>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <View
+        android:background="#f9f9f9"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:id="@+id/brxxcx"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/icon_patient_search"
+                android:layout_gravity="center"
+                android:id="@+id/br"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:text="病人信息查询"
+                    android:textSize="16sp"
+                    android:textColor="#222222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:text="病人的基本信息，包括其主治医师对疾病的诊断，基本费用的消费情况。"
+                    android:textSize="12sp"
+                    android:textColor="#a3a3a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <View
+        android:background="#f9f9f9"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:id="@+id/jyjgcx"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/icon_examine_search"
+                android:layout_gravity="center"
+                android:id="@+id/tx"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:text="检验结果查询"
+                    android:textSize="16sp"
+                    android:textColor="#222222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/chxq"
+                    android:text="通过姓名、床位号您可以查询到该病人的检验情况以及检验报告单。"
+                    android:textSize="12sp"
+                    android:textColor="#a3a3a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <View
+        android:background="#f9f9f9"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:id="@+id/ssjlcx"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/icon_surgery_search"
+                android:layout_gravity="center"
+                android:id="@+id/ss"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:text="手术记录查询"
+                    android:textSize="16sp"
+                    android:textColor="#222222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/ssjlxq"
+                    android:text="病人的手术全纪录，包括术前术后诊断、手术的过程信息。"
+                    android:textSize="12sp"
+                    android:textColor="#a3a3a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <View
+        android:background="#f9f9f9"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:id="@+id/jcjgcx"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/check_search_icon3x"
+                android:layout_gravity="center"
+                android:id="@+id/jc"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:text="检查结果查询"
+                    android:textSize="16sp"
+                    android:textColor="#222222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/jcjgxq"
+                    android:text="通过姓名、床位号您可以查询到该病人的检查及检查报告单"
+                    android:textSize="12sp"
+                    android:textColor="#a3a3a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:background="#dedede"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

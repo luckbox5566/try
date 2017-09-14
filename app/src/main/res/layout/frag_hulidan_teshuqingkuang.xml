@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="总结类型"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_zongjie_select"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_next" />
+
+        <TextView
+            android:id="@+id/tv_zongjie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_zongjie_select"
+            android:layout_marginRight="10dp"
+            android:text="暂无"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="特殊情况"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_changyongci_select"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_next" />
+
+        <TextView
+            android:id="@+id/tv_changyongci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_changyongci_select"
+            android:layout_marginRight="10dp"
+            android:text="常用词"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_teshuqingkuang_content"
+        style="?android:attr/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="left"
+        android:hint="请输入文字"
+        android:padding="8dp"
+        android:textColorHint="#dedede" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede" />
+
+</LinearLayout>

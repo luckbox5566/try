@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_danger_add1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    android:orientation="vertical"
+    tools:context="enjoyor.enjoyorzemobilehealth.activity.danger.ZiLiAbilityActivity">
+    <!--标题-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y45"
+        android:background="@color/hui">
+
+        <ImageView
+            android:id="@+id/iv_colse1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x15"
+            android:padding="@dimen/x5"
+            android:src="@drawable/closeback" />
+
+        <TextView
+            android:id="@+id/tv_home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="ADL评估"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_1" />
+
+        <TextView
+            android:id="@+id/tv_commit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/x10"
+            android:padding="@dimen/x5"
+            android:text="保存"
+            android:textColor="@color/my_bule"
+            android:textSize="@dimen/text_16" />
+
+    </FrameLayout>
+    <!--评估-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_color_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x15"
+            android:text="评估"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tv_pinggu_fengxian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_toLeftOf="@+id/fen"
+            android:background="@drawable/bg_nodanger"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="无需依赖"
+            android:textColor="@color/bai"
+            android:textSize="@dimen/text_12" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fen"
+            android:paddingLeft="@dimen/x10"
+            android:text="0"
+            android:textColor="#f3862e"
+            android:textSize="@dimen/text_20" />
+
+        <TextView
+            android:id="@+id/fen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_score"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x15"
+            android:text="分"
+            android:textColor="#f3862e"
+            android:textSize="@dimen/text_12" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y5"
+        android:background="@color/hui" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bai">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rc_adl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

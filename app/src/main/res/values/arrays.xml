@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="homepage_name">
+        <item>病人医嘱</item>
+        <item>生命体征录入</item>
+        <item>全科体征录入</item>
+        <item>信息查询</item>
+        <item>护理单</item>
+        <item>病人列表</item>
+        <item>温度采集</item>
+        <item>入院评估</item>
+        <item>健康教育</item>
+        <item>医嘱核对</item>
+        <item>危险评估</item>
+        <item>巡回记录</item>
+        <item>血糖监测</item>
+
+    </string-array>
+
+    <integer-array name="homepage_drawable">
+        <item>@drawable/icon_bryz</item>
+        <item>@drawable/icon_smtz</item>
+        <item>@drawable/icon_qktz</item>
+        <item>@drawable/icon_xxcx</item>
+        <item>@drawable/icon_hld</item>
+        <item>@drawable/icon_brlb</item>
+        <item>@drawable/icon_wdcj</item>
+        <item>@drawable/icon_pgfw</item>
+        <item>@drawable/icon_jkjy</item>
+        <item>@drawable/icon_hedui3x</item>
+        <item>@drawable/icon_wxpg</item>
+        <item>@drawable/icon_xhcx3x</item>
+        <item>@drawable/icon_hedui3x</item>
+
+    </integer-array>
+
+    <string-array name="spingarr">
+        <item>收药</item>
+        <item>摆药</item>
+        <item>复合</item>
+    </string-array>
+<!--危险评估-->
+    <string-array name="danger_menus">
+        <item>压疮</item>1
+        <item>跌倒/坠床</item>2
+        <item>自理能力</item>3
+        <item>非计划先拔管</item>4
+        <!--<item>疼痛行为</item>5-->
+        <item>疼痛（自评）</item>6
+        <item>疼痛（他评）</item>7
+        <!--<item>疼痛（儿童）</item>8-->
+        <!--<item>疼痛重症</item>9-->
+        <!--<item>静脉血栓</item>10-->
+        <item>VTE风险护理</item>10
+    </string-array>
+
+    <string-array name="zongjietype">
+        <item>无</item>
+        <item>日间小结</item>
+        <item>24小时总结</item>
+        <item>1小时总结</item>
+        <item>2小时总结</item>
+        <item>3小时总结</item>
+        <item>4小时总结</item>
+        <item>5小时总结</item>
+        <item>6小时总结</item>
+        <item>7小时总结</item>
+        <item>8小时总结</item>
+        <item>9小时总结</item>
+        <item>10小时总结</item>
+        <item>11小时总结</item>
+        <item>12小时总结</item>
+        <item>13小时总结</item>
+        <item>14小时总结</item>
+        <item>15小时总结</item>
+        <item>16小时总结</item>
+        <item>17小时总结</item>
+        <item>18小时总结</item>
+        <item>19小时总结</item>
+        <item>20小时总结</item>
+        <item>21小时总结</item>
+        <item>22小时总结</item>
+        <item>23小时总结</item>
+    </string-array>
+    <string-array name="healthedu">
+        <item>入院</item>
+        <item>住院</item>
+        <item>出院</item>
+    </string-array>
+
+</resources>

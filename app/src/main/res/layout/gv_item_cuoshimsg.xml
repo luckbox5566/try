@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_cuoshimag"
+    android:layout_gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_cuoshimag"
+        android:layout_width="@dimen/x20"
+        android:layout_margin="@dimen/x10"
+        android:layout_height="@dimen/x20"
+        android:src="@drawable/btn_choose_null"/>
+    <TextView
+        android:id="@+id/tv_cuishi_name"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/x5"
+        android:text="" />
+</LinearLayout>

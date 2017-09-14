@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/btn_select02_on2x" android:state_checked="true" />
+    <item android:drawable="@drawable/btn_select02_on2x" android:state_selected="true"></item>
+    <item android:drawable="@drawable/btn_select02_on2x" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/btn_select02_null2x" android:state_checked="false" />
+</selector>

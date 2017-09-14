@@ -1,0 +1,123 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- AppCompatEditText默认状态时设置底线颜色 -->
+        <item name="colorControlNormal">#EEEEEE</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_1</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/show</item>
+        <item name="android:windowExitAnimation">@anim/hide</item>
+    </style>
+
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <!-- 背景颜色及透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 是否没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否背景模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <!--危险评估CheckBox自定义类型-->
+    <style name="MyCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/checkbox_se</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_margin">@dimen/x10</item>
+        <item name="android:layout_width">@dimen/x20</item>
+        <item name="android:layout_height">@dimen/x20</item>
+        <item name="android:padding">@dimen/x12</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <!--术前术后-->
+    <style name="ShoushuStyle">
+        <item name="android:background">@drawable/bg_shoushu</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_margin">0dp</item>
+        <!-- Customize your theme here. -->
+        <!--<item name="android:layout_width">0dp</item>-->
+        <!--<item name="android:layout_height">match_parent</item>-->
+        <!--<item name="android:layout_weight">1</item>-->
+        <!--<item name="android:button">@null</item>-->
+        <!--   <item name="android:drawablePadding">3dp</item>-->
+        <item name="android:textColor">@drawable/text_shoushu</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--自理能力评估-->
+    <style name="ZiLiStyle">
+        <item name="android:background">@drawable/bg_shoushu</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_margin">@dimen/x12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <!--<item name="android:button">@null</item>-->
+           <item name="android:padding">@dimen/x4</item>
+        <item name="android:textColor">@drawable/text_shoushu</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- popUpWindow弹入弹出动画 -->
+    <style name="popUp_window_anim">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+
+    <!-- TabLayout字体大小 -->
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">15sp</item>
+    </style>
+    !--教育健康自定义类型-->
+    <style name="EduCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/checkbox_edu</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_margin">@dimen/x6</item>
+        <item name="android:layout_width">@dimen/x14</item>
+        <item name="android:layout_height">@dimen/x14</item>
+        <item name="android:padding">@dimen/x5</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_adult_pain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="enjoyor.enjoyorzemobilehealth.activity.danger.AdultPainActivity">
+    <!--标题-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y45"
+        android:background="@color/hui">
+
+        <ImageView
+            android:id="@+id/iv_colse_adult"
+            android:padding="@dimen/x3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/closeback" />
+
+        <TextView
+            android:id="@+id/tv_commit_adult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/x10"
+            android:gravity="right"
+            android:padding="@dimen/x5"
+            android:text="保存"
+            android:textColor="@color/my_bule"
+            android:textSize="@dimen/text_16" />
+
+        <TextView
+            android:id="@+id/tv_title_adult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="压疮评估"
+            android:textColor="#333333"
+            android:textSize="@dimen/text_1" />
+
+    </FrameLayout>
+    <!--评估-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x15"
+            android:text="评估"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tv_pinggu_adult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x50"
+            android:layout_toLeftOf="@+id/fen"
+            android:background="@drawable/bg_nodanger"
+            android:gravity="center"
+            android:text="无痛"
+            android:textColor="@color/bai"
+            android:textSize="@dimen/text_12" />
+
+        <TextView
+            android:id="@+id/tv_score_adult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fen"
+            android:paddingLeft="@dimen/x10"
+            android:text="0"
+            android:textColor="#f3862e"
+            android:textSize="@dimen/text_20" />
+
+        <TextView
+            android:id="@+id/fen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_score_adult"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x15"
+            android:text="分"
+            android:textColor="#f3862e"
+            android:textSize="@dimen/text_12" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y5"
+        android:background="@color/hui" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bai">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rc_adult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y13"
+                android:background="@color/hui" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="@dimen/x10"
+                    android:text="护理措施" />
+
+                <enjoyor.enjoyorzemobilehealth.views.CoustomGridView
+                    android:id="@+id/gv_adult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="2"></enjoyor.enjoyorzemobilehealth.views.CoustomGridView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/rd_gp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/y40"-->
+        <!--android:background="@color/hui"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_before"-->
+            <!--style="@style/ShoushuStyle"-->
+            <!--android:layout_width="@dimen/x50"-->
+            <!--android:layout_height="@dimen/y25"-->
+            <!--android:layout_margin="@dimen/x12"-->
+            <!--android:padding="@dimen/x4"-->
+            <!--android:text="术前" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_after"-->
+            <!--style="@style/ShoushuStyle"-->
+            <!--android:layout_width="@dimen/x50"-->
+            <!--android:layout_height="@dimen/y25"-->
+            <!--android:layout_margin="@dimen/x12"-->
+            <!--android:padding="@dimen/x4"-->
+            <!--android:text="术后" />-->
+    <!--</RadioGroup>-->
+</LinearLayout>

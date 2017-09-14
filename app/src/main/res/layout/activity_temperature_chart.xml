@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_changluxiang_bar"
+        android:layout_width="match_parent"
+        android:layout_height="46.08dp"
+        android:background="@color/my_bule"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="体温单"
+            android:textColor="#EEF4FD"
+            android:textSize="17.3sp" />
+
+        <TextView
+            android:id="@+id/tv_temper_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="明细"
+            android:textColor="#EEF4FD"
+            android:textSize="17.3sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/yizhu_img_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/iv_touxiang"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_men" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_temperature_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:text="于小菲"
+                android:textSize="17.3sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_chuanghao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:background="@color/my_bule"
+                android:padding="2dp"
+                android:text="1-101床"
+                android:textColor="#EEF4FD"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:background="#669CA2A8"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/tv_time_ymd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentRight="true"
+                android:text="2017-02-03"
+                android:textColor="#EEF4FD"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#EBEBEB"
+        >
+
+        <TextView
+            android:id="@+id/tv_chart_above"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="最高温度"
+            android:textSize="14sp" />
+
+        <!-- layout_alignBottom属性失效问题 两个tv字体大小不一致，底部对齐会有视觉效果没对齐，需要微调-->
+        <TextView
+            android:id="@+id/tv_chart_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_chart_above"
+            android:layout_alignBottom="@id/tv_chart_above"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_marginBottom="-3dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_chart_temperature_danwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@id/tv_chart_temperature"
+            android:layout_alignBottom="@id/tv_chart_above"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="℃"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_chart_msg_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="偏高"
+            android:textSize="14sp"
+            android:textColor="#B44937"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/tv_chart_msg_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="正常"
+            android:textSize="14sp"
+            />
+        <ImageView
+            android:id="@+id/iv_chart_msg_normal"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/nomal_icon"
+            android:layout_toLeftOf="@id/tv_chart_msg_normal"
+            android:layout_marginRight="3dp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/iv_chart_msg_up"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/up_icon"
+            android:layout_toLeftOf="@id/tv_chart_msg_up"
+            android:layout_marginRight="3dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_hsv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

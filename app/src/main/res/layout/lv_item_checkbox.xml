@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_vte"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_choose"
+        android:layout_width="@dimen/x20"
+        android:layout_margin="@dimen/x10"
+        android:layout_centerVertical="true"
+        android:layout_height="@dimen/x20"
+        android:src="@drawable/btn_choose_null"/>
+    <TextView
+        android:id="@+id/gv_sorce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x15"
+        android:text="" />
+    <TextView
+        android:id="@+id/gv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x5"
+        android:layout_toLeftOf="@+id/gv_sorce"
+        android:layout_toRightOf="@+id/iv_choose"
+        android:text="" />
+</RelativeLayout>

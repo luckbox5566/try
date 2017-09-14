@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">银江移动医疗</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">病区</string>
+    <string name="prompt_password">帐号</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_login">登录界面</string>
+
+    <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_bing_qu_yi_zhu">BingQuYiZhuActivity</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="empty">{
+    "name": "BeJson",
+    "url": "http://www.bejson.com",
+    "page": 88,
+    "isNonProfit": true,
+    "address": {
+        "street": "科技园路.",
+        "city": "江苏苏州",
+        "country": "中国"
+    },
+    "links": [
+        {
+            "name": "Google",
+            "url": "http://www.google.com"
+        },
+        {
+            "name": "Baidu",
+            "url": "http://www.baidu.com"
+        },
+        {
+            "name": "SoSo",
+            "url": "http://www.SoSo.com"
+        }
+    ]
+}</string>
+    <string name="tiaoshu">及时更换衣服\n气床垫\n抬高足跟</string>
+    <string name="pingfen">评分>18分无风险，低风险15-18分中度风险14-15分，高度风险10-12分，极度风险小于等于9分</string>
+    <string name="pinggu">1.新入转入病人两小时内完成首次评估。\n2.低度风险患者每周评估一次。\n3.中、高度风险每三天评估一次\n4.极度风险、危度患者每天评估一次。\n5.手术患者术前、术后评估一次。\n6.病情变化随时评估。</string>
+    <string name="json"></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="bben1">口服</string>
+    <string name="bben2">输液</string>
+    <string name="bben3">临时</string>
+    <string name="bben4">注射</string>
+    <string name="bben5">治疗</string>
+    <string name="bben6">其他</string>
+
+
+</resources>
