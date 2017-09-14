@@ -77,6 +77,7 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
     private ArrayList<Integer> showTitle;
 
     ZhierCall zhierCall;
+    TextView title_textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +87,7 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
         SharedPreferences preferences2 = getSharedPreferences("init", Context.MODE_PRIVATE);
         String name=preferences2.getString("id","");
         String canshu=preferences2.getString("bqdm","");
+        title_textView= (TextView) findViewById(R.id.title);
         zhierCall = (new ZhierCall())
                 .setId(name)
                 .setNumber("0306401")
@@ -200,6 +202,7 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
                         leftAdapter = new LeftAdapter(RypgBbenActivity.this,firstVisibleItem, left_s);
                         lv_menu.setAdapter(leftAdapter);
                         lv_menu.setSelection(firstVisibleItem);
+                        title_textView.setText(left_s[firstVisibleItem]);
                     }
                 });
                 lv_menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -221,6 +224,7 @@ public class RypgBbenActivity extends Activity implements View.OnClickListener {
                          leftAdapter = new LeftAdapter(RypgBbenActivity.this,position, left_s);
                          lv_menu.setAdapter(leftAdapter);
                          lv_home.setSelection(position);
+                         title_textView.setText(left_s[position]);
                      }
                  });
 

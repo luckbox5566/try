@@ -3,6 +3,8 @@ package com.version.rypg;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,8 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -85,6 +89,7 @@ public class RightAdapter  extends BaseAdapter {
         return position;
     }
 
+    Map<String,String> textview_map=new HashMap<>();
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         //创建最外面的layout，并指定一些参数
@@ -106,16 +111,32 @@ public class RightAdapter  extends BaseAdapter {
             //匹配标签
             String no=index_s[index];
             //label
+            int times=0;
             for(int i=0;i<flBben.getLabel_fl().size();i++){
                 String[] spilt=flBben.getLabel_fl().get(i).getTag().split(":");
                 if(no.equals(spilt[2])){
-                    TextView textView=new TextView(context);
-                    textView.setText(spilt[1]);
-                    yh_layout.addView(textView);
+                    if (times==0&&position!=2){
+                        TextView textView=new TextView(context);
+                        textView.setText(spilt[1]+":");
+                        yh_layout.addView(textView);
+                        times++;
+                    }else if(times==0&&position==2){
+                        TextView textView=new TextView(context);
+                        textView.setText(spilt[1]);
+                        yh_layout.addView(textView);
+                        times++;
+                    }
+                    else if(times!=0&&position==2)
+                    {
+                        TextView textView=new TextView(context);
+                        textView.setText("("+spilt[1]+"):");
+                        yh_layout.addView(textView);
+                    }
+
                 }
                 if(position==0&&no.equals("001")&&index==0&&ryrq_index==0){
                     TextView textView=new TextView(context);
-                    textView.setText("入院日期");
+                    textView.setText("入院日期:");
                     yh_layout.addView(textView);
                     ryrq_index=1;
                 }
@@ -134,10 +155,20 @@ public class RightAdapter  extends BaseAdapter {
                 items[j]=s_list.get(j);
             }
             if(s_list.size()>0&&position!=9){
-                Spinner spinner=new Spinner(context);
-                spinner.setBackground(null);
-                spinner.setAdapter(new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,items));
-                yh_layout.addView(spinner);
+//                Spinner spinner=new Spinner(context);
+//                spinner.setBackground(null);
+//                spinner.setAdapter(new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,items));
+//                yh_layout.addView(spinner);
+                yh_layout.setOrientation(LinearLayout.VERTICAL);
+                RadioGroup radioGroup=new RadioGroup(context);
+                radioGroup.setOrientation(LinearLayout.VERTICAL);
+                for(int radio=0;radio<items.length;radio++){
+                    RadioButton radioButton=new RadioButton(context);
+                    radioButton.setText(items[radio]);
+                    radioGroup.addView(radioButton);
+                }
+                yh_layout.addView(radioGroup);
+
             }else if(s_list.size()>0&&position==9){
                 android.widget.CheckBox checkBox=new CheckBox(context);
                 checkBox.setText(s_list.get(0));
@@ -146,10 +177,32 @@ public class RightAdapter  extends BaseAdapter {
             //textview
             for(int i=0;i<flBben.getTextbox_fl().size();i++){
                 String[] spilt=flBben.getTextbox_fl().get(i).getTag().split(":");
+                final String key=flBben.getTextbox_fl().get(i).getTag();
                 if(no.equals(spilt[2])){
                     EditText editText=new EditText(context);
                     editText.setLayoutParams(new ViewGroup.LayoutParams(400, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    if(textview_map.get(key)!=null){
+                        editText.setText(textview_map.get(key));
+                    }
+
                     yh_layout.addView(editText);
+
+                    editText.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence s, int start, int before, int count) {
+                           textview_map.put(key,s.toString());
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable s) {
+
+                        }
+                    });
 
                 }
             }
