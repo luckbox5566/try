@@ -1,16 +1,22 @@
 package com.version.rypg;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -90,6 +96,7 @@ public class RightAdapter  extends BaseAdapter {
         LinearLayout fater_layout= (LinearLayout) convertView.findViewById(R.id.father);
         //获得分类
         FlBben flBben=map.get(position+1);
+        int ryrq_index=0;
         for(int index=0;index<index_s.length;index++){
             //需要添加的一行
             LinearLayout yh_layout=new LinearLayout(context);
@@ -105,10 +112,75 @@ public class RightAdapter  extends BaseAdapter {
                     TextView textView=new TextView(context);
                     textView.setText(spilt[1]);
                     yh_layout.addView(textView);
+                }
+                if(position==0&&no.equals("001")&&index==0&&ryrq_index==0){
+                    TextView textView=new TextView(context);
+                    textView.setText("入院日期");
+                    yh_layout.addView(textView);
+                    ryrq_index=1;
+                }
+            }
+            //checkbox
+            ArrayList<String> s_list=new ArrayList<>();
+            for(int i=0;i<flBben.getCheckbox_fl().size();i++){
+                String[] spilt=flBben.getCheckbox_fl().get(i).getTag().split(":");
+
+                if(no.equals(spilt[2])){
+                    s_list.add(spilt[1]);
+                }
+            }
+            String[] items=new String[s_list.size()];
+            for(int j=0;j<s_list.size();j++){
+                items[j]=s_list.get(j);
+            }
+            if(s_list.size()>0){
+                Spinner spinner=new Spinner(context);
+                spinner.setBackground(null);
+                spinner.setAdapter(new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,items));
+                yh_layout.addView(spinner);
+            }
+            //textview
+            for(int i=0;i<flBben.getTextbox_fl().size();i++){
+                String[] spilt=flBben.getTextbox_fl().get(i).getTag().split(":");
+                if(no.equals(spilt[2])){
+                    EditText editText=new EditText(context);
+                    editText.setLayoutParams(new ViewGroup.LayoutParams(400, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    yh_layout.addView(editText);
 
                 }
             }
-            //
+            //datetime
+            for(int i=0;i<flBben.getDatetime_fl().size();i++){
+                String[] spilt=flBben.getDatetime_fl().get(i).getTag().split(":");
+                if(no.equals(spilt[2])){
+
+                    final Calendar ca = Calendar.getInstance();
+                    final int[] mYear = {ca.get(Calendar.YEAR)};
+                    final int[] mMonth = {ca.get(Calendar.MONTH)};
+                    final int[] mDay = {ca.get(Calendar.DAY_OF_MONTH)};
+
+                    final TextView textView=new TextView(context);
+                    textView.setText(mYear[0] +"年"+ mMonth[0] +"月"+ mDay[0] +"日");
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                           DatePickerDialog.OnDateSetListener mdateListener = new DatePickerDialog.OnDateSetListener() {
+                                @Override
+                                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                    mYear[0] = year;
+                                    mMonth[0] = monthOfYear;
+                                    mDay[0] = dayOfMonth;
+                                    textView.setText(mYear[0] +"年"+ mMonth[0] +"月"+ mDay[0] +"日");
+                                }
+                            };
+                            DatePickerDialog dialog=new DatePickerDialog(context, mdateListener, mYear[0], mMonth[0], mDay[0]);
+                            dialog.show();
+                        }
+                    });
+                   yh_layout.addView(textView);
+                }
+            }
+
             fater_layout.addView(yh_layout);
 
         }
