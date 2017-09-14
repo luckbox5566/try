@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -90,8 +91,10 @@ public class RightAdapter  extends BaseAdapter {
     }
 
     Map<String,String> textview_map=new HashMap<>();
+    Map<String,String> radiogroup_map=new HashMap<>();
+    Map<String,String> checkbox_map=new HashMap<>();
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         //创建最外面的layout，并指定一些参数
         LinearLayout linearLayout=new LinearLayout(context);
         linearLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -143,13 +146,16 @@ public class RightAdapter  extends BaseAdapter {
             }
             //checkbox
             ArrayList<String> s_list=new ArrayList<>();
+            String key3="";
             for(int i=0;i<flBben.getCheckbox_fl().size();i++){
                 String[] spilt=flBben.getCheckbox_fl().get(i).getTag().split(":");
 
                 if(no.equals(spilt[2])){
                     s_list.add(spilt[1]);
+                    key3=key3+flBben.getCheckbox_fl().get(i).getTag();
                 }
             }
+            final String key2=key3;
             String[] items=new String[s_list.size()];
             for(int j=0;j<s_list.size();j++){
                 items[j]=s_list.get(j);
@@ -160,19 +166,60 @@ public class RightAdapter  extends BaseAdapter {
 //                spinner.setAdapter(new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,items));
 //                yh_layout.addView(spinner);
                 yh_layout.setOrientation(LinearLayout.VERTICAL);
-                RadioGroup radioGroup=new RadioGroup(context);
+               final RadioGroup radioGroup=new RadioGroup(context);
                 radioGroup.setOrientation(LinearLayout.VERTICAL);
                 for(int radio=0;radio<items.length;radio++){
                     RadioButton radioButton=new RadioButton(context);
                     radioButton.setText(items[radio]);
                     radioGroup.addView(radioButton);
                 }
+
+               /* RadioButton radioButton2=(RadioButton)radioGroup.getChildAt(0);
+                radioButton2.setChecked(true);*/
+
                 yh_layout.addView(radioGroup);
+                radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        RadioButton radioButton= (RadioButton) group.getChildAt(checkedId-1);
+                        for(int i=0;i<radioGroup.getChildCount();i++){
+                            if(checkedId==radioGroup.getChildAt(i).getId()){
+                                int h=i+1;
+                                radiogroup_map.put(key2,h+"");
+                                break;
+                            }
+                        }
+
+
+                    }
+                });
+
+
+                if(radiogroup_map.get(key2)!=null){
+                    //radioGroup.check(Integer.parseInt(radiogroup_map.get(key2)));
+                    for(int i=0;i<radioGroup.getChildCount();i++){
+                        RadioButton radioButton=(RadioButton)radioGroup.getChildAt(i);
+                        if((Integer.parseInt(radiogroup_map.get(key2))-1)==i){
+                            radioButton.setChecked(true);
+                            break;
+                        }
+
+                    }
+                }
 
             }else if(s_list.size()>0&&position==9){
                 android.widget.CheckBox checkBox=new CheckBox(context);
                 checkBox.setText(s_list.get(0));
+                if(checkbox_map.get(key2)!=null){
+                    checkBox.setChecked(true);
+                }
                 yh_layout.addView(checkBox);
+                checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        checkbox_map.put(key2,"1");
+                    }
+                });
             }
             //textview
             for(int i=0;i<flBben.getTextbox_fl().size();i++){
